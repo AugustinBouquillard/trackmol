@@ -1,0 +1,19 @@
+RW_types:
+- fBM
+- LW
+- sBM
+- OU
+- CTRW
+dim: 2
+e_dim: 6
+gamma: 0.98
+latent_dim: 16
+log_distance_features: true
+lr: 0.001
+n_c: 32
+predict_alpha: true
+predict_model: true
+scale_types:
+- step_std
+- mean_time_step
+x_dim: 6
