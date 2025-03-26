@@ -2,7 +2,7 @@ from platform import node
 from torch.functional import cdist
 import torch.nn as nn
 from torch_geometric.data import Batch, Data
-from torch_geometric.utils.subgraph import subgraph
+from torch_geometric.utils._subgraph import subgraph
 from torch_scatter import scatter
 import torch
 

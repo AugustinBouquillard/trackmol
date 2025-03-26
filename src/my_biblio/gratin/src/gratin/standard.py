@@ -267,9 +267,9 @@ def plot_demo(
     dm = DataModule(ds_params=ds_params, dl_params=dl_params, graph_info=graph_info)
     dm.setup(plot=False)
 
-    trainer = pl.Trainer(
-        auto_select_gpus=torch.cuda.is_available(), gpus=1 * torch.cuda.is_available()
-    )
+    trainer = pl.Trainer()
+        #auto_select_gpus=torch.cuda.is_available(), gpus=1 * torch.cuda.is_available()
+    #)
 
     trainer.test(model, dm.test_dataloader())
 
