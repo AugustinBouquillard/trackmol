@@ -9,3 +9,10 @@ build-backend = "setuptools.build_meta"
 version_scheme = "no-guess-dev"
 [tool.setuptools]
 package-dir = {"" = "src"}
+
+
+dependencies = [
+    "numpy>=1.21,<2.0",
+    "pandas>=1.3,<2.0",
+    "scikit-learn>=0.24,<1.3"
+]
