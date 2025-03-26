@@ -1,12 +1,13 @@
 Metadata-Version: 2.4
-Name: my_biblio
-Version: 0.0.post1.dev12+gc697951
+Name: trackmol
+Version: 0.0.post1.dev16+ge42052c
 Summary: Add a short description here!
 Home-page: https://github.com/pyscaffold/pyscaffold/
 Author: Pierre Mazzucotelli
 Author-email: pierre.mazzucotelli@gmail.com
 License: MIT
 Project-URL: Documentation, https://pyscaffold.org/
+Project-URL: Source, https://github.com/AugustinBouquillard/trackmol/
 Platform: any
 Classifier: Development Status :: 4 - Beta
 Classifier: Programming Language :: Python
