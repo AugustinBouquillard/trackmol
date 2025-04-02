@@ -1,61 +1,58 @@
 # trackmol
 
-Le package **trackmol** offre un ensemble d’outils pour la manipulation, l'analyse et la visualisation de structures moléculaires. Il se décline en plusieurs modules afin de couvrir différents besoins : analyse de données, clustering, traitement d’images via des techniques de computer vision, génération de trajectoires moléculaires et outils divers pour faciliter le workflow de recherche et développement en chimie computationnelle.
+The **trackmol** package offers a set of tools for manipulating, analyzing, and visualizing molecular structures. It is divided into several modules to cover different needs: data analysis, clustering, image processing using computer vision techniques, molecular trajectory generation, and various tools to facilitate the research and development workflow in computational chemistry.
 
-## Table des matières
+
+## Table of Contents
 
 - [Installation](#installation)
-- [Utilisation](#utilisation)
-- [Modules Principaux](#modules-principaux)
+- [Usage](#usage)
+- [Main Modules](#main-modules)
   - [analysis](#analysis)
   - [clustering](#clustering)
   - [computer_vision](#computer_vision)
   - [generation_walks](#generation_walks)
   - [gratin](#gratin)
   - [tools](#tools)
-- [Exemples](#exemples)
+- [Examples](#examples)
 - [Contribution](#contribution)
-- [Licence](#licence)
+- [License](#license)
 
 ## Installation
 
-Vous pouvez installer **trackmol** à partir du dépôt source. Assurez-vous d’avoir Python 3.6 ou une version supérieure.
+You can install **trackmol** from the source repository. Make sure you have Python 3.6 or a later version.
 
 ```sh
-# Cloner le dépôt
-git clone https://votre-repository.git
+# Clone the repository
+git clone https://your-repository.git
 ```
 
-Le package est structuré dans le répertoire [src/trackmol](src/trackmol).
+The package is structured in the directory [src/trackmol](src/trackmol).
 
-## Utilisation
+## Usage
 
-Consultez la documentation de chaque module pour plus de détails sur les fonctions et classes offertes.
+Refer to the documentation of each module for more details on the available functions and classes.
 
-## Modules Principaux
+## Main Modules
 ### analysis
 
-Fournit des outils pour réaliser des analyses poussées sur des structures moléculaires et extraire des informations pertinentes.
+Enables analysis of random walk trajectories (MSD...).
 
 ### clustering
 
-Permet de regrouper des molécules ou des motifs similaires à l’aide d’algorithmes de clustering.
+Allows clustering in latent space and links between latent space and the physical properties of the environment in which the random walks take place.
 
 ### computer_vision
 
-Intègre des techniques de computer vision pour le traitement et l’analyse d’images représentant des structures moléculaires ou des simulations.
+Using computer vision techniques, experimental trajectories can be determined from experimentally collected videos. 
 
 ### generation_walks
 
-Contient des algorithmes pour la génération de trajectoires ou de marches aléatoires afin d'explorer l'espace moléculaire.
+Enables random walk generation both statistically and from a position in latent space by denoising diffusion.
 
 ### gratin
 
-[Module spécifique à détailler si des fonctionnalités supplémentaires y sont implémentées.]
-
-### tools
-
-Regroupe divers utilitaires qui facilitent le traitement de données et l’intégration des différents modules.
+Module developed by Institut Pasteur and H. Verdier, which uses graph-based neural networks to classify different random walk models and estimate key walk parameters.
 
 ## Exemples
 
