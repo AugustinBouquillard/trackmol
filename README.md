@@ -1,5 +1,7 @@
 # trackmol
 
+<img src="logo_trackmol.png" alt="Logo of trackmol" width="600">
+
 The **trackmol** package offers a set of tools for manipulating, analyzing, and visualizing molecular structures. It is divided into several modules to cover different needs: data analysis, clustering, image processing using computer vision techniques, molecular trajectory generation, and various tools to facilitate the research and development workflow in computational chemistry.
 
 
