@@ -31,7 +31,7 @@ def trace_each(particules, liste_n):
 
 def regression(X, Y):
     mask = ~np.isnan(X) & ~np.isnan(Y)  # Crée un masque pour ignorer les NaN
-    Xcorr = X[mask]  
+    Xcorr = X[mask]
     Ycorr = Y[mask]
     slope, intercept, r_value, p_value, std_err = linregress(Xcorr,Ycorr)
     Z = Xcorr * slope + intercept
@@ -91,7 +91,8 @@ def trace_Dn(particules, liste_n, frequence):
     #plt.ylim(0, 50)
     plt.xlabel("D (m²/s)")
     plt.ylabel("nombre de particules")
-  
+
+"""
 frequence91 = 100
 frequence92 = 10
 particules91 = trajectoires("film91.csv")
@@ -133,3 +134,4 @@ print(f"DM = {DM} m²/s")
 #trace_Dn(particules, liste_n_92, frequence)
 #trace_Dn(particules5, particules5, frequence92)
 trace_Dn(particules4, particules4, frequence92)
+"""
