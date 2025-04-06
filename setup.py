@@ -8,15 +8,27 @@
 """
 
 from setuptools import setup
+import sys
+import subprocess
 
-if __name__ == "__main__":
+# Function to install torch
+def install_torch():
     try:
-        setup(use_scm_version={"version_scheme": "no-guess-dev"})
-    except:  # noqa
-        print(
-            "\n\nAn error occurred while building the project, "
-            "please ensure you have the most updated version of setuptools, "
-            "setuptools_scm and wheel with:\n"
-            "   pip install -U setuptools setuptools_scm wheel\n\n"
-        )
-        raise
+        import torch
+    except ImportError:
+        print("Torch not found. Installing torch...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "torch"])
+
+# Install torch before running setup
+install_torch()
+
+# Now we can safely run the setup() function
+setup(
+    name="trackmol",
+    version="0.1.0",
+    packages=["trackmol"],
+    install_requires=["pandas", "numpy",
+        "torch>=1.13.1", "torch-geometric", "torch-cluster==1.6.3", "torch-scatter",
+        "torch-sparse", "torch-spline-conv", "torchmetrics","scikit-learn","matplotlib","tqdm"
+    ]
+)

@@ -12,8 +12,8 @@ Created on Wed Oct  9 15:50:05 2024
 model, encoder = load_model(export_path="tracktor2D")
 """
 
-from gratin.standard import load_model, plot_demo
-from gratin.standard import get_predictions, trajectory_is_valid
+from trackmol.gratin.standard import load_model, plot_demo
+from trackmol.gratin.standard import get_predictions, trajectory_is_valid
 import pandas as pd
 import numpy as np
 import os
@@ -25,7 +25,7 @@ def easy_predictions(filename,plot=False):
     if os.path.isdir(filename):
         for file in os.listdir(filename):
             file_name = str(filename)+"/"+os.fsdecode(file)
-    
+
             trajectories = pd.read_csv(file_name)
             model, encoder = load_model(export_path="tracktor2D")
 
@@ -48,10 +48,10 @@ def easy_predictions(filename,plot=False):
 
             #predictions.to_csv('gratin_results_for_n2_+myoIb_1_trackedPar.csv')
             #predictions.to_csv('gratin_results_Video6_test.csv')
-            
+
             pred_name = 'gratin_results_for_'+file_name.split('/')[-1].split('.')[0]+'.csv'
             predictions.to_csv(pred_name)
-            
+
     else:
         trajectories = pd.read_csv(filename)
         model, encoder = load_model(export_path="tracktor2D")
@@ -75,7 +75,7 @@ def easy_predictions(filename,plot=False):
 
         #predictions.to_csv('gratin_results_for_n2_+myoIb_1_trackedPar.csv')
         #predictions.to_csv('gratin_results_Video6_test.csv')
-            
+
         pred_name = 'gratin_results_for_'+filename.split('/')[-1].split('.')[0]+'.csv'
         predictions.to_csv(pred_name)
 

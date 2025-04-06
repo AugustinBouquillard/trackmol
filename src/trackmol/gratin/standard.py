@@ -1,15 +1,15 @@
-from gratin.models.main_net import MainNet
-from gratin.data.datamodule import DataModule
+from trackmol.gratin.models.main_net import MainNet
+from trackmol.gratin.data.datamodule import DataModule
 import pytorch_lightning as pl
-from gratin.models.utils import get_predictions_of_dl
-from gratin.training.callbacks import Plotter
+from trackmol.gratin.models.utils import get_predictions_of_dl
+from trackmol.gratin.training.callbacks import Plotter
 import matplotlib.pyplot as plt
 from pytorch_lightning.callbacks import (
     EarlyStopping,
     LearningRateMonitor,
     ModelCheckpoint,
 )
-from gratin.data.dataset import ExpTrajDataSet
+from trackmol.gratin.data.dataset import ExpTrajDataSet
 from torch_geometric.loader import DataLoader
 import os
 from umap import ParametricUMAP
