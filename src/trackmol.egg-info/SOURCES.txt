@@ -1,9 +1,6 @@
-.DS_Store
-AUTHORS.rst
-CHANGELOG.rst
-CONTRIBUTING.rst
 LICENSE
 LICENSE.txt
+MANIFEST.in
 README.md
 README.rst
 logo_trackmol.jpg
@@ -134,5 +131,3 @@ src/trackmol/gratin/training/__pycache__/__init__.cpython-311.pyc
 src/trackmol/gratin/training/__pycache__/callbacks.cpython-311.pyc
 src/trackmol/gratin/training/__pycache__/network_tools.cpython-311.pyc
 src/trackmol/tools/.gitkeep
-tests/conftest.py
-tests/test_skeleton.py
