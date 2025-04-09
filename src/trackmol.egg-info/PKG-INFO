@@ -1,6 +1,6 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: trackmol
-Version: 0.1.0
+Version: 1.0.0
 Summary: Add a short description here!
 Home-page: https://github.com/pyscaffold/pyscaffold/
 Author: Zakarie Aloui, Augustin Bouquillard, Noe Colomban, Jeanne Leclerc, Pierre Mazzucotelli, Ugo Wassermann
@@ -20,19 +20,13 @@ Requires-Dist: scikit-learn
 Requires-Dist: matplotlib
 Requires-Dist: fbm
 Requires-Dist: tqdm
-Requires-Dist: umap-learn[parametric_umap]>=0.5.2
-Requires-Dist: torch>=1.13.1
-Requires-Dist: torch-geometric
-Requires-Dist: torch-cluster==1.6.3
-Requires-Dist: torch-scatter
-Requires-Dist: torch-sparse
-Requires-Dist: torch-spline-conv
-Requires-Dist: torchmetrics
-Requires-Dist: pytorch-lightning
+Requires-Dist: torch
 Provides-Extra: testing
 Requires-Dist: setuptools; extra == "testing"
 Requires-Dist: pytest; extra == "testing"
 Requires-Dist: pytest-cov; extra == "testing"
+Dynamic: license-file
+Dynamic: requires-dist
 
 .. These are examples of badges you might want to add to your README:
    please update the URLs accordingly

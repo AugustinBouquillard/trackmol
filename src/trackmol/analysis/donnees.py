@@ -91,6 +91,7 @@ def trace_Dn(particules, liste_n, frequence):
     #plt.ylim(0, 50)
     plt.xlabel("D (m²/s)")
     plt.ylabel("nombre de particules")
+    plt.show()
 
 """
 frequence91 = 100

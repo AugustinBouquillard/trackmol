@@ -25,9 +25,9 @@ install_torch()
 # Now we can safely run the setup() function
 setup(
     name="trackmol",
-    version="0.1.0",
+    version="1.0.0",
     packages=["trackmol"],
-    install_requires=["pandas", "numpy","scipy","scikit-learn","matplotlib","fbm","tqdm","umap-learn[parametric_umap]>=0.5.2","torch"]
+    install_requires=["pandas", "numpy","scipy","scikit-learn","matplotlib","fbm","tqdm","torch"]#"umap-learn[parametric_umap]>=0.5.2","torch"]
         #"torch>=1.13.1", "torch-geometric", "torch-cluster==1.6.3", "torch-scatter",
         #"torch-sparse", "torch-spline-conv", "torchmetrics","pytorch-lightning"
     #]
