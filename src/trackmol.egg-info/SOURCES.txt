@@ -35,7 +35,7 @@ src/trackmol/analysis/.gitkeep
 src/trackmol/analysis/__init__.py
 src/trackmol/analysis/donnees.py
 src/trackmol/clustering/__init__.py
-src/trackmol/clustering/clustering_utils.py
+src/trackmol/clustering/clustering.py
 src/trackmol/computer_vision/.gitkeep
 src/trackmol/computer_vision/__init__.py
 src/trackmol/computer_vision/computer_vision_and__tracking.py
@@ -43,6 +43,8 @@ src/trackmol/computer_vision/computer_vision_and__tracking_groupby.py
 src/trackmol/examples/.DS_Store
 src/trackmol/examples/.gitkeep
 src/trackmol/examples/Clustering.ipynb
+src/trackmol/examples/Clustering_en.ipynb
+src/trackmol/examples/Clustering_fr.ipynb
 src/trackmol/examples/.ipynb_checkpoints/Clustering-checkpoint.ipynb
 src/trackmol/generation_walks/.DS_Store
 src/trackmol/generation_walks/.gitkeep

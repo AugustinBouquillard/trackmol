@@ -17,14 +17,15 @@ from sklearn.metrics import silhouette_score
 
 from scipy.stats import gaussian_kde
 
-def print_data(path):
+def load_and_print_data(path, separator=None):
     """
     print_data function.
     print the data and the name of the columns
     """
-    df = pd.read_csv(path)
+    df = pd.read_csv(path,sep=separator)
     print(df.describe())
     print(df.columns)
+    return df
 
 #print_data("gratin_results_for_n2_+myoIb_1_trackedPar.csv")
 
@@ -147,8 +148,8 @@ Displays a scatter plot in a FacetGrid with automatic adjustment of the X and Y 
     plt.show()
 
 
-    def load_data(file_path):
-    return pd.read_csv(file_path)
+def load_data(file_path,separator=None):
+    return pd.read_csv(file_path,sep=separator)
 
 
 def plot_by_alpha(data):
