@@ -151,6 +151,14 @@ Displays a scatter plot in a FacetGrid with automatic adjustment of the X and Y 
 def load_data(file_path,separator=None):
     return pd.read_csv(file_path,sep=separator)
 
+def select_traj_longer_than(data,l):
+    if "length" in data.keys():
+        return data[data["length"]>=l]
+    elif "n_points" in data.keys():
+        return data[data["n_points"]>=l]
+    else:
+        print("no length available")
+
 
 def plot_by_alpha(data):
     U1 = data['U_1']
@@ -204,7 +212,10 @@ def plot_by_density(data):
 def plot_by_n_points(data):
     U1 = data['U_1']
     U2 = data['U_2']
-    n_points = data['n_points']
+    try :
+        n_points = data['n_points']
+    except :
+        n_points = data['length']
 
     plt.figure(figsize=(10, 6))
     scatter = plt.scatter(U1, U2, c=n_points, cmap='viridis', s=30, edgecolor='k', alpha=0.7)
@@ -250,7 +261,7 @@ def optimise_k_means(data, max_k,features): #computes k optimal value. features 
 
     fig = plt.subplots(figsize=(10, 5))
     plt.plot(means, inertias, 'o-',linestyle="--",label="Inertie")
-    plt.axvline(optimal_k,linestyle="--",color="red",label=f"Optimal k ={optimal_k}")
+    #plt.axvline(optimal_k,linestyle="--",color="red",label=f"Optimal k ={optimal_k}")
     plt.xlabel("Number of Clusters")
     plt.ylabel("Inertia")
     plt.title("Elbow method")
